@@ -14,7 +14,10 @@ app.get('/', (req, res) => {
   
 
 // Middleware
-app.use(cors());               // <-- ADD THIS LINE
+app.use(cors({
+  origin: '*'
+}));
+
 app.use(express.json());
 
 
